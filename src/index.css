@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  
+  --color-brand-blue: #3b82f6; /* Modern Vibrant Blue */
+  --color-brand-orange: #f97316; /* Clean Premium Orange */
+  --color-brand-green: #10b981; /* Emerald Green */
+  --color-brand-dark: #1e293b; /* Premium Slate-800 for high-end text */
+  
+  /* Soft, luxurious blurred shadows replacing the hard 2D cartoon offsets */
+  --shadow-bold: 0 10px 30px -10px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.02);
+  --shadow-bold-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.12), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-bold-sm: 0 4px 12px -2px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  
+  --shadow-bold-orange: 0 12px 24px -4px rgba(249, 115, 22, 0.15), 0 1px 2px rgba(249, 115, 22, 0.05);
+  --shadow-bold-blue: 0 12px 24px -4px rgba(59, 130, 246, 0.15), 0 1px 2px rgba(59, 130, 246, 0.05);
+  --shadow-bold-green: 0 12px 24px -4px rgba(16, 185, 129, 0.15), 0 1px 2px rgba(16, 185, 129, 0.05);
+}
+
+@layer base {
+  body {
+    background-color: #f8fafc; /* Sleek slate-50 canvas */
+    color: #0f172a;
+    font-family: var(--font-sans);
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Thin border overrides with sophisticated soft slate colors to de-cartoonify */
+  .border-2, .border-3, .border-4, .border-l-3, .border-b-2 {
+    border-width: 1px !important;
+  }
+  
+  .border-brand-dark, [class*="border-brand-dark"] {
+    border-color: #e2e8f0 !important; /* Soft premium slate-200 border */
+  }
+
+  /* inputs refine */
+  input, select, textarea {
+    border-width: 1px !important;
+    border-color: #cbd5e1 !important;
+    border-radius: 0.75rem !important;
+    transition: all 0.2s ease;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12) !important;
+  }
+}
+
+/* De-animation / Overriding cartoon transitions on active states */
+button, a, .card, [class*="transition-all"], [class*="hover\:"] {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms !important;
+}
+
+/* Prevent translation offsets on active click used in neo-brutalist buttons */
+.active\:translate-x-\[2px\]:active,
+.active\:translate-y-\[2px\]:active,
+.active\:shadow-none:active,
+.active\:translate-x-0\.5:active,
+.active\:translate-y-0\.5:active {
+  transform: scale(0.97) !important;
+  box-shadow: inherit !important;
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-left: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+

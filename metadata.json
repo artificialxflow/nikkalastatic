@@ -1,0 +1,6 @@
+{
+  "name": "سامانه فروشگاهی نیک‌کالا",
+  "description": "سامانه فروشگاهی مدرن نیک‌کالا با سبک طراحی لایت و بلد (Light & Bold)، شامل لندینگ پیج مشتری، ویترین محصولات، سبد خرید زنده و پنل مدیریت سفارشات و محصولات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
